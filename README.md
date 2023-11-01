@@ -10,8 +10,11 @@ These files are designed to perform metamaterial calculations via a multiscale m
  This code enables to know the total energy of the probe as well as the energy in each of the smaller regions. Moreover, the energy and deformation of each bar in the matamaterial is available
 
 In this code, three geometries ("multiscale") are used:
+
 	1- When the probe is solved as an homogeneous solid, it is discretized with "thin hexaedra", which are used for the FEA calculation
+ 
 	2- To analise certain regions of the solid with the exact metamaterial, the solid must be divided into regions, which are also hexaedra but larger than the latter (these are called "large hexaedra") and they are not used for any FEA calculation
+ 
 	3- The different large hexaedra are filled with the corresponding metamaterial bars. This is why they are referred as "metamaterial regions"
 
 The homogeneuos solid calculation is used to impose approximate boundary conditions for each of the metamaterial regions. This is done by relating the interior displacements in the homogeneous solid to the nodes of the metamaterial in the boundaries of each region.
@@ -22,14 +25,22 @@ The homogeneuos solid calculation is used to impose approximate boundary conditi
 
 ### EXECUTION PROCESS
 1- Open the file "MAIN_multiescala_hexaedros_mallado_fino_grueso_MEF"
+
 2- Choose the name for the generated results documents
+
 3- Now, three aspects can be modified:
+
         1) The dimensions of the probe (it is a prism) and its dimension in X, Y and Z can be selected.
+	
 	2) The boundary conditions (both for the fixed points and for the imposed displacements)
+ 
                Given that the boundary conditions are imposed to the homogeneous solid, only three degrees of freedom are considered in each node (displacements in X, Y and Z)
+	       
                The coordinates where the conditions are imposed may be specific points in space or they may be specified as "all" if all the points with a specific coordinate are to be selected.
                There are different predesigned boundary conditions that are commented, so with the comment/uncomment command one can be selected (tension-compression, bending, torsion)
+	       
 	3) The hyperparameters to specify how to solve the problem. The hyperparameters range from 7 to 11 depending on the method for solving the problem. 
+ 
     		a) if the method is gradient: "off", the 7 hyperparameters are:
     			-iter_desplaz = Number of steps in which the total final displacement is divided      
 			-iter_max = Number of iterations to converge in each step
@@ -50,6 +61,7 @@ The homogeneuos solid calculation is used to impose approximate boundary conditi
 			-iter_max_solido_grad = Number of iterations to converge in each step (This value substitutes "iter_max")
 			-iter_max_gradiente = Maximum number of iterations to converge using the gradient method
 4- Results: 
+
 	a) During the execution of the code
 		- Information of the beginning and end of each command is shown
 		- Detailed information of the total energy accumulated, increments of energy, deformation, tangent Young's modulus, etc. is shown for each hexaedron
