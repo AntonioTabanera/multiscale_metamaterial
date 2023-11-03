@@ -47,7 +47,7 @@ The homogeneuos solid calculation is used to impose approximate boundary conditi
 			-tolerancia = Convergence critera: difference between the error vector in two succesive iterations (in the same step)
 			-tolerancia_2 = Convergence critera: difference between the error vector in two non-succesive iterations (in the same step)
 			-diferencial = Longitude differential for the calculation of derivatives
-			-eps_limite = Deformation threshold in a hexaedron. If it is passed, the the corresponding region is analyzed via metamaterial entoces la region pasa a analizarse con metamaterial
+			-eps_limite = Deformation threshold in a hexaedron. If it is passed, the the corresponding region is analyzed via metamaterial
 			-modelo_calculo = Model to update the tangent Young's modulus of a given hexaedron (3 possibilities) 
                                                 "modelo_energia_hexaedros_gruesos": This model updates all thin hexahedrons with the same value as the thick hexahedron. It updates them by adjusting the tangent Young's modulus so that the energy matches that of the zone calculated by the metamaterial
                                                 "modelo_daño_hexaedros_finos": This model updates all thin hexahedrons with different values from the thick hexahedron. It updates them by adjusting the tangent Young's modulus so that the energy of each thin hexaedron matches that calculated by the metamaterial 
