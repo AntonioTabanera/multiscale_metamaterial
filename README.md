@@ -10,6 +10,7 @@ These files are designed to perform metamaterial calculations via a multiscale m
  This code enables to know the total energy of the probe as well as the energy in each of the smaller regions. Moreover, the energy and deformation of each bar in the matamaterial is available
 
 In this code, three geometries ("multiscale") are used:
+
 	1- When the probe is solved as an homogeneous solid, it is discretized with "thin hexaedra", which are used for the FEA calculation
  
 	2- To analise certain regions of the solid with the exact metamaterial, the solid must be divided into regions, which are also hexaedra but larger than the latter (these are called "large hexaedra") and they are not used for any FEA calculation
